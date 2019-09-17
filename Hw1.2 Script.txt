@@ -1,0 +1,18 @@
+#!/bin/sh
+mkdir first
+mkdir second
+echo "How many files would you like created (Enter a # divisible by 2)"
+read INPUT_INT
+let z=INPUT_INT
+let half=$z/2
+while [ "$z" -gt "$half" ]
+do
+	touch second/file$z.text
+	let z=z-1
+done
+
+while [ "$z" != 0]
+do
+	touch first/file$z.text
+	let z=z-1
+done

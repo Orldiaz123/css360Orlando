@@ -1,0 +1,10 @@
+#!/bin/sh
+echo "Enter how many files you want to create"
+read INPUT_INT
+let z=INPUT_INT
+echo "You asked for: $z files"
+while [ "$z" != 0 ]
+do
+	touch file$z.text
+	let z=z-1
+done
