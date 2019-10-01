@@ -1,19 +1,19 @@
---Hw2.1
+#Hw2.1
 #!/bin/sh
 grep "Male" data.text
 
 
---Hw2.2
+#Hw2.2
 #!/bin/sh
 awk -F ',' '{ if($2 ~ /^[AK]/) print }' data.text
 
 
---Hw2.3
+#Hw2.3
 #!/bin/sh
 grep -oP "...-...-...." data.text
 
 
---Hw2.4
+#Hw2.4
 #!/bin/sh
 awk -F ',' '{print $1}' data.text | cat > id
 awk -F ',' '{print $2}' data.text | cat > first_name
@@ -24,25 +24,25 @@ awk -F ',' '{print $6}' data.text | cat > ip_address
 awk -F ',' '{print $7}' data.text | cat > phone
 
 
---Hw2.5
+#Hw2.5
 #!/bin/sh
 wc -l data.text
 
 
---Hw2.6
+#Hw2.6
 #!/bin/sh
 sed 's/.com/.org/' data.text
 
 
---Hw2.7
+#Hw2.7
 #!/bin/sh
 sed 's/[A-Z]/(\0)/1; s/[A-Z]/(\0)/2' data.text
 
 
---Hw2.8
+#Hw2.8
 #!/bin/sh
 sed '3d' data.text
 
 
---Hw2.9
+#Hw2.9
 cat -n data.text
